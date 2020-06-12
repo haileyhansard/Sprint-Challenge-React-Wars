@@ -1,12 +1,16 @@
 import React from "react";
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 const CharacterCard = props => {
     return (
-        <div>
-            <h2>Character Name: {props.name}</h2>
-            <p>Height: {props.height}</p>
-            <p>Mass: {props.mass}</p>
-        </div>
+        <Card>
+            <CardTitle color="danger">Character Name: {props.name}</CardTitle>
+            <CardSubtitle>Height: {props.height}</CardSubtitle>
+            <CardSubtitle>Mass: {props.mass}</CardSubtitle>
+        </Card>
     );
 };
 
