@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
+import {Container} from 'reactstrap';
 
 export default function Character(){
 const [list, setList] = useState([]);
@@ -19,6 +20,7 @@ useEffect(() => {
 }, []);
 
 return (
+    <Container>
     <div>
         {list.map(person => {
             return (<div>
@@ -32,6 +34,7 @@ return (
             );
         })}
     </div>
+    </Container>
 );
 
 }
