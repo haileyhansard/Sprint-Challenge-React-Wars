@@ -11,26 +11,13 @@ import Character from './components/Character';
   // sync up with, if any.
   
 function App() {
-  const [list, setList] = useState({});
-  useEffect(() => {
-    axios.get("https://swapi.dev/api/people/")
-      .then(response => {
-      console.log("response", response.data);
-      console.log(list);
-      setList(response.data)
-      
-      })
-      .catch(error => {
-      console.log("Wrong something is!", error);
-      });
-  }, []);
-
   return (
-    <div className="App">
-      <h1 className="Header">Characters from Star Wars</h1>
-      <Character list={list}/>
+    <div>
+      <h1>Welcome to the Rebel Army!</h1>
+      <h2>Yes it's true, Darth Vader is now on OUR SIDE!!!</h2>
+      <Character />
     </div>
-  );
+  )
 }
 
 export default App;
